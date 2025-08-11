@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulai Cuan Digital - Ubah Waktu Luang Jadi Penghasilan dari Rumah</title>
+    <meta name="description" content="Temukan cara membangun sumber penghasilan digital Anda sendiri dengan panduan lengkap, bahkan jika Anda seorang pemula.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Basic Styling */
+        :root {
+            --primary-color: #007BFF; /* Biru Profesional */
+            --secondary-color: #FFC107; /* Kuning untuk Aksi */
+            --dark-color: #2c3e50; /* Teks Utama */
+            --light-color: #ecf0f1; /* Latar Belakang Terang */
+            --success-color: #2ecc71; /* Hijau untuk Keberhasilan */
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--dark-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; color: var(--primary-color); }
+        p { margin-bottom: 1rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease-in-out, background-color 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ffca2c;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        /* Problem Section */
+        #problem {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-card {
+            background: var(--light-color);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .problem-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Solution / Features Section */
+        #features {
+            padding: 4rem 0;
+            background: var(--light-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .feature-item .icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: var(--success-color);
+        }
+        
+        #features img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+
+        /* Testimonials Section */
+        #testimonials {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+        }
+
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .testimonial-card .author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+        }
+        
+        .author-info span {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Pricing Section */
+        #pricing {
+            padding: 4rem 0;
+            background: var(--light-color);
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: #fff;
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .price span.strikethrough {
+            text-decoration: line-through;
+            font-size: 1.5rem;
+            color: #999;
+            display: block;
+            margin-bottom: -1rem;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .pricing-card ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-card ul li::before {
+            content: '✓';
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .guarantee {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        /* FAQ Section */
+        #faq {
+            padding: 4rem 0;
+            max-width: 800px;
+            margin: auto;
+        }
+        
+        #faq h2 { text-align: center; }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #features img {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Ubah Waktu Luang Jadi <span style="color: var(--secondary-color);">Cuan Dari Rumah</span></h1>
+            <p>Temukan rahasia membangun sumber penghasilan digital Anda sendiri, bahkan jika Anda seorang pemula. Dapatkan panduan lengkap dan teruji untuk memulai perjalanan finansial Anda hari ini.</p>
+            <a href="https://lynk.id/pokoknyabagus" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Lihat Pilihan Paket!</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="problem">
+            <div class="container">
+                <h2>Apakah Ini yang Anda Rasakan?</h2>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="icon">😩</div>
+                        <h3>Lelah dengan Rutinitas</h3>
+                        <p>Merasa terjebak dalam pekerjaan 9-to-5 yang monoton dan ingin kebebasan finansial serta waktu.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="icon">💰</div>
+                        <h3>Ingin Penghasilan Tambahan</h3>
+                        <p>Gaji saat ini terasa pas-pasan dan Anda membutuhkan sumber pendapatan lain untuk kebutuhan dan impian.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="icon">🤔</div>
+                        <h3>Bingung Memulai Dari Mana</h3>
+                        <p>Punya keinginan untuk bisnis online, tapi tidak tahu harus mulai dari mana, apa yang harus dijual, dan bagaimana caranya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div>
+                        <h2>Memperkenalkan: Kit "Mulai Cuan Digital"</h2>
+                        <p>Ini bukan sekadar kursus biasa. Ini adalah sebuah blueprint lengkap yang berisi semua yang Anda butuhkan untuk memulai dan menghasilkan dari dunia digital.</p>
+                        <div class="feature-item">
+                            <div class="icon">▶️</div>
+                            <div>
+                                <h4>Panduan Video Step-by-Step</h4>
+                                <p> video tutorial yang mudah diikuti, dari mencari ide, validasi produk, hingga strategi marketing.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon">📚</div>
+                            <div>
+                                <h4>Ebook & Checklist Strategi</h4>
+                                <p>Rangkuman strategi, rahasia, dan checklist praktis agar Anda tidak kehilangan arah.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon">🎨</div>
+                            <div>
+                                <h4>Template Siap Pakai</h4>
+                                <p>Dapatkan akses ke puluhan template desain, copywriting, dan landing page yang terbukti menghasilkan.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon">💬</div>
+                            <div>
+                                <h4>Komunitas Eksklusif</h4>
+                                <p>Bergabung dengan ribuan member lain, bertanya, dan berdiskusi langsung dengan para mentor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" alt="Produk Kit Mulai Cuan Digital">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <div class="container">
+                <h2>Apa Kata Mereka yang Sudah Bergabung?</h2>
+                <p>Mereka berhasil, Anda pun pasti bisa!</p>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Materi di kit ini benar-benar 'daging' semua. Kurang dari 1 bulan, saya sudah bisa dapat orderan pertama dari bisnis afiliate saya. Sangat direkomendasikan untuk pemula!"</p>
+                        <div class="author">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="Andi S.">
+                            <div class="author-info">
+                                <h4>Andi S.</h4>
+                                <span>Karyawan Swasta, Jakarta</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Awalnya ragu karena saya ibu rumah tangga. Ternyata panduannya mudah diikuti. Sekarang saya punya penghasilan sendiri dari membuat dan menjual produk digital sederhana."</p>
+                        <div class="author">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Rina W.">
+                            <div class="author-info">
+                                <h4>Rina W.</h4>
+                                <span>Ibu Rumah Tangga, Surabaya</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Sebagai mahasiswa, saya butuh uang jajan tambahan. Komunitasnya sangat membantu. Saya belajar banyak dari sharing sesama anggota dan mentor. Investasi terbaik!"</p>
+                        <div class="author">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Eka Putra">
+                            <div class="author-info">
+                                <h4>Eka Putra</h4>
+                                <span>Mahasiswa, Yogyakarta</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="container">
+                <h2>Investasi Terbaik untuk Masa Depan Finansial Anda</h2>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Pertanyaan yang Sering Diajukan</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">Apakah saya butuh pengalaman teknis?</div>
+                        <div class="faq-answer">
+                            <p>Tidak sama sekali. Kit ini dirancang khusus untuk pemula. Semua dijelaskan dari nol dengan bahasa yang mudah dimengerti. Jika Anda bisa menggunakan media sosial, Anda pasti bisa mengikuti panduan ini.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Berapa lama sampai saya bisa menghasilkan uang?</div>
+                        <div class="faq-answer">
+                            <p>Hasil bervariasi tergantung usaha masing-masing. Namun, banyak member kami yang sudah melihat hasil (penjualan pertama) dalam 30 hari pertama setelah menerapkan strategi dari kit ini secara konsisten.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Apakah ini skema cepat kaya atau MLM?</div>
+                        <div class="faq-answer">
+                            <p>Bukan. Ini adalah program edukasi yang mengajarkan Anda cara membangun bisnis digital yang nyata dan berkelanjutan. Tidak ada janji muluk dalam semalam. Kesuksesan Anda bergantung pada kemauan belajar dan usaha Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Apakah pembayaran hanya sekali?</div>
+                        <div class="faq-answer">
+                            <p>Benar. Anda hanya membayar sekali untuk mendapatkan akses selamanya ke semua materi dan update di masa mendatang, termasuk akses ke komunitas. Tidak ada biaya bulanan atau biaya tersembunyi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mulai Cuan Digital. All Rights Reserved.</p>
+            <p>Sebuah platform edukasi untuk membantu Anda mencapai kebebasan finansial.</p>
+            <p style="margin-top: 1rem;"><a href="https://lynk.id/pokoknyabagus" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-color); text-decoration: none;">Lihat Katalog Produk Lengkap Kami</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk Accordion FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+
+                // Tutup semua item lain
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = 0;
+                    }
+                });
+
+                // Buka atau tutup item yang diklik
+                if (isActive) {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = 0;
+                } else {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
